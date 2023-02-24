@@ -25,5 +25,5 @@ int a, b;
 			_putchar('\\');
 			_putchar('\n');
 		}
-	}	
+	}
 }
