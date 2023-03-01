@@ -3,18 +3,14 @@
 /**
  * _puts - function that prints a string, followed by a new line.
  *
- * @str : variable 
- *
- * Return: Always 0.
+ * @str : variable
  */
-void _puts(char *str)
 
+void _puts(char *str)
 {
-	int i;
-	
-	for (i = 0; *str + i; != '\0'; i++)
+	for (; *str != '\0'; str++)
 	{
-		_putchar (*(str + i ))
+		_putchar(*str);
 	}
-	-putchar('\n')
+	_putchar('\n');
 }
