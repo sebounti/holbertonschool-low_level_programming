@@ -5,7 +5,7 @@
  * str_concat - Concatenate two strings
  * @s1: The string to concatenate
  * @s2: The string to concatenate
- * Return: A pointer to the new concatenated string
+ * Return: A pointer to the new concatenated stringgit 
  */
 
 char *str_concat(char *s1, char *s2)
