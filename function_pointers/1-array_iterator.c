@@ -1,0 +1,17 @@
+#include "function_pointers.h"
+
+/**
+ * array_iterator - Task 1: executes a function given as a parameter,
+ * on each element of an array.
+ *
+ * @array: pointer to array being iterated through
+ * @size: size of the array
+ * @action: pointer to the function used
+ *
+ * Return: Nothing.
+ */
+
+void array_iterator(int *array, size_t size, void (*action)(int))
+{
+    
+}
