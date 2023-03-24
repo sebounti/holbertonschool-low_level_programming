@@ -7,44 +7,45 @@
  * @i: input paramter of type va_list
  * Return: no need
  */
-void print_char (va_list i)
+void print_char(va_list i)
 {
-    printf("%c", va_arg (i, int));
+	printf("%c", va_arg(i, int));
 }
 /**
- * print_int - print int 
+ * print_int - print int
  * @i: input paramter of type va_list
  * Return: no need
  */
-void print_int (va_list i)
+void print_int(va_list i)
 {
-    printf("%d", va_arg (i, int));
+	printf("%d", va_arg(i, int));
 }
 /**
  * print_float - print float, promoted type to double
  * @i: input paramter of type va_list
  * Return: no need
  */
-void print_float (va_list i)
+void print_float(va_list i)
 {
-    printf("%f", va_arg (i, double));
+	printf("%f", va_arg(i, double));
 }
 /**
  * print_string - print string, treat NULL as (nil)
  * @i: input paramter of type va_list
  * Return: no need
  */
-void print_string (va_list i)
+void print_string(va_list i)
 {
-    char *s;
-    s = va_arg (i, char *);
+	char *s;
 
-    if (s == NULL)
-    {
-        printf("(nil)");
-        return;
-    }
-    printf("%s", s);
+	s = va_arg(i, char *);
+
+	if (s == NULL)
+	{
+	printf("(nil)");
+	return;
+	}
+	printf("%s", s);
 }
 /**
  * print_all - a function that prints all inputs
@@ -52,8 +53,8 @@ void print_string (va_list i)
  * Return: void
  */
 void print_all(const char * const format, ...)
-{   
-    int i, j;
+{
+	int i, j;
 	char *sep = "";
 	va_list ap;
 
@@ -67,23 +68,23 @@ void print_all(const char * const format, ...)
 
 	va_start(ap, format);
 
-    i = 0;
-    while (format != NULL && format [i] != '\0')
-    {
-            j = 0;
+	i = 0;
+	while (format != NULL && format[i] != '\0')
+	{
+	j = 0;
 		while (j < 4)
-            {
-			if (*printtypes[j].format == format[i])
-			{
-			printf("%s", sep);
-			printtypes[j].func[ap];
-			sep = ", ";
+		{
+			if (printtypes[j].format[0] == format[i])
+				{
+				printf("%s", sep);
+				printtypes[j].func(ap);
+				sep = ", ";
+				}
+				j++;
 			}
-			j++;
-            }
 		i++;
-    }
+	}
 
-	printf("\n");
-	va_end (ap);
+printf("\n");
+va_end(ap);
 }
