@@ -9,7 +9,6 @@ void print_all(const char * const format, ...);
 
 /**
  * struct format - Struct format
- *
  * @format: the string format
  * @func: the function for which way to print
  */
