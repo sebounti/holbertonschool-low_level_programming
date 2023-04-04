@@ -9,9 +9,9 @@
  */
 size_t list_len(const list_t *h)
 {
-	size_t n = 0;
+	size_t n = 0; /*variable pour compter les elements*/
 
-	while (h)
+	while (h)/*boucle */
 	{
 		n++;
 		h = h->next;
