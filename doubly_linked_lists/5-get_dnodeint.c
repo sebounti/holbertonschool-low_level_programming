@@ -17,8 +17,8 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	}
 	else
 	{
-		current_node = head;/*Sinon, on pointe le pointeur courant sur le premier nœud*/
-		while (count < index)/*Boucle pour parcourir la liste jusqu'à l'index voulu*/
+		current_node = head;/*Sinon, on pointe le pointeur sur le premier nœud*/
+		while (count < index)/*Boucle pour parcourir la liste jusqu'à l'index*/
 		{
 
 			if (current_node->next != NULL)/*Si le nœud courant a un nœud suivant dans la liste*/
