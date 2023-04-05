@@ -21,16 +21,16 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		while (count < index)/*Boucle pour parcourir la liste jusqu'à l'index*/
 		{
 
-			if (current_node->next != NULL)/*Si le nœud courant a un nœud suivant dans la liste*/
+			if (current_node->next != NULL)/*Si le node courant a un node suiv*/
 			{
-			current_node = current_node->next;/*On pointe le pointeur courant sur le nœud suivant*/
+			current_node = current_node->next;/*On pointe le point dessus*/
 			count++;/*On incrémente le compteur de nœuds parcourus*/
 			}
 			else/*Si le nœud courant n'a pas de nœud suivant dans la liste*/
 			{
-			return (NULL);/*On retourne NULL car l'index n'existe pas dans la liste*/
+			return (NULL);/*On return NULL car index n'existe pas dans la liste*/
 			}
 		}
 	}
-	return (current_node);/*On retourne le pointeur courant, qui pointe sur le nœud à l'index voulu*/
+	return (current_node);/*returne le point vers le nœud à l'index voulu*/
 }
